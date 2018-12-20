@@ -13,7 +13,7 @@
     <h1>THE MUSIC APP</h1>
 
     <% if logged_in? %>
-      <h1><%= current_user.email %></h1>
+      <h2><%= current_user.email %></h2>
       <form action="<%= session_url %>" method="POST">
         <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
         <input type="hidden" name="_method" value="DELETE">
