@@ -1,8 +1,8 @@
-<h1>Welcome!</h1>
-<h2>Sign up</h2>
+<h1>Log In</h1>
 
-<form action="<%= users_url %>" method="POST">
+<form action="<%= session_url %>" method="POST">
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+
   <label for="email">Email:
     <input type="text" name="user[email]" value="<%= @user.email %>">
   </label>
@@ -11,5 +11,6 @@
     <input type="password" name="user[password]" value="">
   </label>
 
-  <input type="submit" value="Sign Up">
+  <input type="submit" value="Login">
+
 </form>
